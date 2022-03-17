@@ -3,7 +3,7 @@ package ru.skypro;
 public class Main {
 
     public static void main(String[] args) {
-	task3();
+        task2();
     }
 
     public static void task1() {
@@ -92,16 +92,15 @@ public class Main {
         arr[0] = 1;
         arr[1] = 2;
         arr[2] = 3;
-        for (int i = 0; i < arr.length; i++)
-            if (arr[i] % 2 != 0 && i != arr.length - 1) {
-                arr[i] = arr[i] + 1;
-                System.out.print(arr[i] + ", ");
-            } else if (arr[i] % 2 == 0) {
-                System.out.print(arr[i] + ", ");
-            } else {
-                arr[i] = arr[i] + 1;
-                System.out.println(arr[i]);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                arr[i]++;
             }
+            if (i > 0) {
+                System.out.print(", ");
+            }
+            System.out.print(arr[i]);
+        }
+
     }
 }
-
